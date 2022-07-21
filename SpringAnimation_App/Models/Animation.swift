@@ -16,25 +16,28 @@ struct Animation {
     let duration: Double
     let delay: Double
     
+    var description: String {
+        """
+        preset: \(preset)
+        curve: \(curve)
+        force: \(String(format: "%.2f", force))
+        duration: \(String(format: "%.2f", duration))
+        delay: \(String(format: "%.2f", delay))
+        """
+    }
+    
 }
 
 extension Animation {
     static func getRandomAnimation() -> Animation {
-        let preset = DataManager.shared.presets.randomElement() ?? "slideUp"
-        let curve = DataManager.shared.curves.randomElement() ?? "spring"
-        
-        let force = Double.random(in: 2...5)
-        let duration = Double.random(in: 1...3)
-        let delay = Double.random(in: 0...0.9)
-        
-        let animation = Animation(
-            preset: preset,
-            curve: curve,
-            force: force,
-            duration: duration,
-            delay: delay
+
+        Animation(
+            preset: DataManager.shared.presets.randomElement()?.rawValue ?? "slideUp",
+            curve: DataManager.shared.curves.randomElement()?.rawValue ?? "spring",
+            force: Double.random(in: 1...3),
+            duration: Double.random(in: 1...3),
+            delay: Double.random(in: 0.3...0.7)
         )
         
-        return animation
     }
 }

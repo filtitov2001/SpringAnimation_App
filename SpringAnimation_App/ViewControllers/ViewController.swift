@@ -14,11 +14,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var springView: SpringView!
     
-    @IBOutlet weak var presetValueLabel: UILabel!
-    @IBOutlet weak var curveValueLabel: UILabel!
-    @IBOutlet weak var forceValueLabel: UILabel!
-    @IBOutlet weak var durationValueLabel: UILabel!
-    @IBOutlet weak var delayValueLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+   
     
     private var animation = Animation.getRandomAnimation()
     
@@ -30,11 +27,7 @@ class ViewController: UIViewController {
     }
     
     private func updateSpringView() {
-        presetValueLabel.text = animation.preset
-        curveValueLabel.text = animation.curve
-        forceValueLabel.text = String(format: "%.2f", animation.force)
-        durationValueLabel.text = String(format: "%.2f", animation.duration)
-        delayValueLabel.text = String(format: "%.2f", animation.delay)
+        descriptionLabel.text = animation.description
     }
     
     private func setupAnimation() {
