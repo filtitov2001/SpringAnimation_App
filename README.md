@@ -8,7 +8,7 @@ User can see random animations with anim's preferences.
   [![iOS](https://img.shields.io/badge/iOS-15.5-blue)](https://www.apple.com/ru/ios/ios-15/)
   [![Swift](https://img.shields.io/badge/Swift-5.5-orange)](https://developer.apple.com/documentation/swift)
   [![UIKit](https://img.shields.io/badge/UIKit-%20LTS-yellowgreen)](https://developer.apple.com/documentation/uikit)
-  [![Spring](https://img.shields.io/static/v1?label=Spring&message=1.0.5&color=ff6964)](https://developer.apple.com/documentation/uikit)
+  [![Spring](https://img.shields.io/static/v1?label=Spring&message=1.0.5&color=ff6964)](https://github.com/LexDeBash/Spring)
  
 </div>
 
